@@ -161,27 +161,27 @@ Password: attendai2026
 ---
 
 ## 📸 Screenshots
-
+ 
 ### Landing Page
-![Landing Page](screenshots/landing.png)
-
+![Landing Page](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/landing.png)
+ 
 ### Kiosk Mode
-![Kiosk](screenshots/kiosk.png)
-
+![Kiosk](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/kiosk.png)
+ 
 ### Admin Dashboard
-![Dashboard](screenshots/dashboard.png)
-
+![Dashboard](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/dashboard.png)
+ 
 ### Employee Management
-![Employees](screenshots/employee.png)
-
+![Employees](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/employee.png)
+ 
 ### Attendance Records
-![Records](screenshots/records.png)
-
+![Records](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/records.png)
+ 
 ### Admin Login
-![Login](screenshots/login.png)
-
+![Login](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/login.png)
+ 
 ### Employee Registration
-![Register](screenshots/register.png)
+![Register](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/register.png)
 
 ---
 
