@@ -163,13 +163,13 @@ Password: attendai2026
 ## 📸 Screenshots
  
 ### Landing Page
-![Landing Page](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/landing.png)
+![Landing Page](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/Landing.png)
  
 ### Kiosk Mode
-![Kiosk](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/kiosk.png)
+![Kiosk](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/Kiosk.png)
  
 ### Admin Dashboard
-![Dashboard](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/Dashboard.png)
  
 ### Employee Management
 ![Employees](https://raw.githubusercontent.com/Jam-Ehtisham-Qadir/FaceLog-AI-Powered-Attendance-System-/main/screenshots/employee.png)
