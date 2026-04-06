@@ -172,13 +172,16 @@ Password: attendai2026
 ![Dashboard](screenshots/dashboard.png)
 
 ### Employee Management
-![Employees](screenshots/employees.png)
+![Employees](screenshots/employee.png)
 
 ### Attendance Records
 ![Records](screenshots/records.png)
 
-### Payroll Excel Export
-![Payroll](screenshots/payroll.png)
+### Admin Login
+![Login](screenshots/login.png)
+
+### Employee Registration
+![Register](screenshots/register.png)
 
 ---
 
