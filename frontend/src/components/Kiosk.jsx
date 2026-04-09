@@ -302,7 +302,7 @@ export default function Kiosk() {
         setResult({
           success: false,
           status: errData?.status || 'error',
-          message: errData?.message || 'Server error.',
+          message: errData?.error || errData?.message || 'Server error.',
         })
         stopCamera()
         playSound(false)

@@ -76,6 +76,10 @@ export default function Landing() {
           />
         </div>
 
+        {/* Demo Credentials */}
+        <div style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.3)", borderRadius: "12px", padding: "12px 24px", marginBottom: "24px", textAlign: "center", color: "#a5b4fc", fontSize: "13px" }}>
+          🔐 <strong>Demo Admin Credentials:</strong> Username: <code style={{background:"rgba(0,0,0,0.3)",padding:"2px 6px",borderRadius:"4px"}}>admin</code> · Password: <code style={{background:"rgba(0,0,0,0.3)",padding:"2px 6px",borderRadius:"4px"}}>Test1234</code>
+        </div>
         {/* Footer */}
         <div style={s.footer}>
           Built by{' '}

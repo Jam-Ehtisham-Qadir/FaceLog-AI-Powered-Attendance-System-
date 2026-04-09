@@ -14,6 +14,15 @@ from .models import Employee, EmployeePhoto, AttendanceRecord
 from .serializers import EmployeeSerializer, EmployeePhotoSerializer, AttendanceRecordSerializer
 from .services import check_liveness, match_face, verify_attendance
 
+# Pre-warm DeepFace on startup
+try:
+    from deepface import DeepFace
+    import numpy as np
+    dummy = np.zeros((100, 100, 3), dtype=np.uint8)
+    DeepFace.represent(dummy, model_name="Facenet", enforce_detection=False)
+except Exception:
+    pass
+
 ADMIN_USERNAME = 'admin'
 ADMIN_PASSWORD = 'Test1234'
 
@@ -210,7 +219,7 @@ class CheckInView(APIView):
                         "employee_id": matched_employee.employee_id,
                         "department": matched_employee.department,
                     },
-                    "check_in_time": now.strftime('%I:%M %p'),
+                    "check_in_time": now.astimezone(pytz.timezone("Asia/Karachi")).strftime('%I:%M %p PKT'),
                     "confidence": match_confidence,
                     "liveness_confidence": liveness_confidence,
                     "spoof_confidence": spoof_confidence,
@@ -324,8 +333,8 @@ class CheckOutView(APIView):
                         "employee_id": matched_employee.employee_id,
                         "department": matched_employee.department,
                     },
-                    "check_in_time": checkin_local.strftime('%I:%M %p'),
-                    "check_out_time": checkout_local.strftime('%I:%M %p'),
+                    "check_in_time": checkin_local.strftime('%I:%M %p PKT'),
+                    "check_out_time": checkout_local.strftime('%I:%M %p PKT'),
                     "hours_worked": hours_worked,
                     "confidence": match_confidence,
                 })
