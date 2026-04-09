@@ -11,6 +11,12 @@
 
 ---
 
+## 🌐 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-facelog.duckdns.org-brightgreen?style=for-the-badge&logo=googlechrome)](https://facelog.duckdns.org)
+
+> **Demo Credentials:** Username: `admin` · Password: `Test1234`
+
 ## 📌 Overview
 
 **FaceLog** is a smart attendance management system that uses **facial recognition** to automate employee check-in and check-out. It eliminates manual attendance, prevents buddy punching, and generates automated payroll reports — all through a clean, modern web interface.
