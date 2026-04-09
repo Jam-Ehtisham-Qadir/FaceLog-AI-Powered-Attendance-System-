@@ -42,7 +42,7 @@ export default function Landing() {
       <div style={s.content}>
         {/* Logo */}
         <div style={s.logoWrap}>
-          <img src="/src/assets/logo.png" style={{ width: '250px', height: '250px', objectFit: 'contain' }} />
+          <img src="/assets/logo.png" style={{ width: '250px', height: '250px', objectFit: 'contain' }} />
           <div>
             <div style={s.logoName}>FaceLog</div>
             <div style={s.logoTagline}>AI-Powered Attendance System</div>

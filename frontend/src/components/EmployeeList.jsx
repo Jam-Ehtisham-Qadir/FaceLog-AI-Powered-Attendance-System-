@@ -80,7 +80,7 @@ function SalaryEditor({ empId, currentSalary, onSaved }) {
     if (!value || isNaN(value) || Number(value) < 0) return
     setSaving(true)
     try {
-      await axios.patch(`http://127.0.0.1:8000/api/employees/${empId}/salary/`, { salary: Number(value) })
+      await axios.patch(`/api/employees/${empId}/salary/`, { salary: Number(value) })
       onSaved(Number(value))
       setEditing(false)
     } catch (err) {
@@ -187,7 +187,7 @@ export default function EmployeeList() {
   const [searchFocus, setSearchFocus] = useState(false)
 
   const fetchEmployees = () => {
-    axios.get('http://127.0.0.1:8000/api/employees/')
+    axios.get('/api/employees/')
       .then(res => setEmployees(res.data))
       .catch(err => console.error(err))
       .finally(() => setLoading(false))
@@ -209,7 +209,7 @@ export default function EmployeeList() {
   const handleDelete = async (id, name) => {
     if (!window.confirm(`Delete ${name}? This cannot be undone.`)) return
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/employees/${id}/`)
+      await axios.delete(`/api/employees/${id}/`)
       fetchEmployees()
       if (expandedId === id) setExpandedId(null)
     } catch (err) { console.error(err) }
@@ -225,7 +225,7 @@ export default function EmployeeList() {
     if (employeePhotos[emp.id]) return
     setPhotosLoading(true)
     try {
-      const res = await axios.get('http://127.0.0.1:8000/api/employees/')
+      const res = await axios.get('/api/employees/')
       const found = res.data.find(e => e.id === emp.id)
       if (found) {
         const allPhotos = []
@@ -240,7 +240,7 @@ export default function EmployeeList() {
   const getPhotoUrl = (url) => {
     if (!url) return null
     if (url.startsWith('http')) return url
-    return `http://127.0.0.1:8000${url}`
+    return `${url}`
   }
 
   const angleLabels = ['Straight', 'Left', 'Right', 'Up', 'Down']

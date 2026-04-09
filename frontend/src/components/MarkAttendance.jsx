@@ -63,7 +63,7 @@ export default function MarkAttendance() {
     const formData = new FormData()
     formData.append('photo', photo)
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/attendance/mark/', formData)
+      const res = await axios.post('/api/attendance/mark/', formData)
       setResult(res.data)
     } catch (err) {
       setResult({ status: 'error', message: err.response?.data?.error || 'Something went wrong.' })

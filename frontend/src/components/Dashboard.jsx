@@ -46,7 +46,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     const fetchStats = () => {
-      axios.get('http://127.0.0.1:8000/api/dashboard/stats/')
+      axios.get('/api/dashboard/stats/')
         .then(res => {
           setStats(res.data)
           setLastUpdated(new Date())

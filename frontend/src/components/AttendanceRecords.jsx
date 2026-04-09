@@ -66,7 +66,7 @@ export default function AttendanceRecords() {
     setLoading(true)
     const params = { page: pg }
     if (month) params.month = month
-    axios.get('http://127.0.0.1:8000/api/attendance/records/', { params })
+    axios.get('/api/attendance/records/', { params })
       .then(res => {
         setRecords(res.data.records)
         setTotal(res.data.total)
@@ -151,7 +151,7 @@ export default function AttendanceRecords() {
   const handleDelete = async (id) => {
     if (!window.confirm('Delete this record?')) return
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/attendance/records/${id}/delete/`)
+      await axios.delete(`/api/attendance/records/${id}/delete/`)
       setRecords(prev => prev.filter(r => r.id !== id))
       const next = new Set(selected)
       next.delete(id)
@@ -168,7 +168,7 @@ export default function AttendanceRecords() {
     if (!window.confirm(`Delete ${selected.size} selected record${selected.size > 1 ? 's' : ''}? This cannot be undone.`)) return
     setDeleting(true)
     try {
-      await axios.post('http://127.0.0.1:8000/api/attendance/records/bulk-delete/', { ids: Array.from(selected) })
+      await axios.post('/api/attendance/records/bulk-delete/', { ids: Array.from(selected) })
       setRecords(prev => prev.filter(r => !selected.has(r.id)))
       setTotal(t => t - selected.size)
       setSelected(new Set())
@@ -182,14 +182,14 @@ export default function AttendanceRecords() {
 
   const handleExport = () => {
     const url = selectedMonth
-      ? `http://127.0.0.1:8000/api/attendance/export/?month=${selectedMonth}`
-      : `http://127.0.0.1:8000/api/attendance/export/`
+      ? `/api/attendance/export/?month=${selectedMonth}`
+      : `/api/attendance/export/`
     window.open(url, '_blank')
   }
 
   const handlePayrollExport = () => {
     if (!selectedMonth) { alert('Please select a month first.'); return }
-    window.open(`http://127.0.0.1:8000/api/attendance/export-payroll/?month=${selectedMonth}`, '_blank')
+    window.open(`/api/attendance/export-payroll/?month=${selectedMonth}`, '_blank')
   }
 
   const selectedMonthLabel = monthOptions.find(m => m.value === selectedMonth)?.label || 'All'

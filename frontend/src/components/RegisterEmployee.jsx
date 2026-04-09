@@ -70,7 +70,7 @@ export default function RegisterEmployee() {
     setResult(null)
     setDuplicate(null)
     try {
-      const check = await axios.get(`http://127.0.0.1:8000/api/employees/`)
+      const check = await axios.get(`/api/employees/`)
       const exists = check.data.some(emp => emp.employee_id === form.employee_id.trim())
       if (exists) {
         setResult({ success: false, message: `⚠️ Employee ID '${form.employee_id}' is already taken. Please use a different ID.` })
@@ -233,7 +233,7 @@ export default function RegisterEmployee() {
     formData.append('photo', capturedPhotos[0], 'photo_straight.jpg')
 
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/employees/', formData)
+      const res = await axios.post('/api/employees/', formData)
       const employeeId = res.data.employee.id
 
       if (capturedPhotos.length > 1) {
@@ -241,7 +241,7 @@ export default function RegisterEmployee() {
         capturedPhotos.slice(1).forEach((blob, i) => {
           extraData.append('photos', blob, `photo_${STEPS[i + 1].id}.jpg`)
         })
-        await axios.post(`http://127.0.0.1:8000/api/employees/${employeeId}/add-photos/`, extraData)
+        await axios.post(`/api/employees/${employeeId}/add-photos/`, extraData)
       }
 
       speak(`${form.name} has been registered successfully!`)

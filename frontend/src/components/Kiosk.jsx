@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import * as faceapi from 'face-api.js'
 import axios from 'axios'
 
-const BACKEND = 'http://127.0.0.1:8000'
+const BACKEND = ''
 const AUTO_SCAN_DELAY = 2000
 
 function HoverKioskBtn({ onClick, disabled, color, children }) {
@@ -363,7 +363,7 @@ export default function Kiosk() {
     return (
       <div style={s.kiosk}>
         <div style={s.homeWrap}>
-          <img src="/src/assets/logo.png" style={{ width: '250px', height: '250px', objectFit: 'contain' }} />
+          <img src="/assets/logo.png" style={{ width: '250px', height: '250px', objectFit: 'contain' }} />
           <div style={s.homeTitle}>FaceLog</div>
           <div style={s.homeSub}>AI-Powered Attendance System</div>
           <div style={s.homeTime}>

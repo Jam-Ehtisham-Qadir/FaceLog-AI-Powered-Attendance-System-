@@ -26,7 +26,7 @@ export default function Login() {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/auth/login/', form)
+      const res = await axios.post('/api/auth/login/', form)
       if (res.data.success) {
         login()
         navigate('/dashboard')

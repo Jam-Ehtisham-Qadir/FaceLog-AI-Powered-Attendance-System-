@@ -80,7 +80,7 @@ function AdminLayout() {
       }}>
         {/* Logo */}
         <div style={{ marginBottom: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
-          <img src="/src/assets/logo.png" style={{ width: '150px', height: '150px', objectFit: 'contain' }} />
+          <img src="/assets/logo.png" style={{ width: '150px', height: '150px', objectFit: 'contain' }} />
           <div style={{ textAlign: 'center' }}>
             <div style={{ fontSize: '18px', fontWeight: '800', color: '#f1f5f9' }}>FaceLog</div>
             <div style={{ fontSize: '11px', color: '#94a3b8' }}>Admin Portal</div>
